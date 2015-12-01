@@ -31,9 +31,9 @@ $juegos = $gestor->get($id);
         </div>
     </header>
         <div class="cajaEditar cajaAdmin">
-        <form action="phpedit.php" method="POST">
+        <form action="phpedit.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id_juego" value="<?php echo $juegos->getId_juego()?>" /><br />
-            <span class="labels">Caratula </span><input type="text" name="caratula" value="<?php echo $juegos->getCaratula();?>" /><br />
+            <span class="labels">Caratula </span><input type="file" name="caratula" value="<?php echo $juegos->getCaratula();?>" /><br />
             <span class="labels">Nombre<sup>*</sup> </span><input required  type="text" name="nombre" value="<?php echo $juegos->getNombre();?>" /><br />
             <span class="labels">Genero<sup>*</sup></span><input required  list="generos" name="genero" value="<?php echo $juegos->getGenero();?>" /><br />
             <datalist id="generos">

@@ -8,9 +8,9 @@ $pkID = Request::post("pkID");
 $r = $gestor->set($cliente, $pkID);
 
 $bd->close();
-echo $r;
-var_dump($bd->getError());
+//echo $r;
+//var_dump($bd->getError());
 
-//header("Location:index.php?op=edit&r=$r");
+header("Location:index.php?op=edit&r=$r");
 
 

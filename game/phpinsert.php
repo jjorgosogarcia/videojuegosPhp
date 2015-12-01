@@ -9,12 +9,14 @@ $subir= new FileUpload("caratula");
 $subir->setDestino("./caratulas/");
 $subir->setTamaño(100000000);
 $subir->setNombre($subir->getNombre());
-$subir->setPolitica(FileUpload::RENOMBRAR);
+$subir->setPolitica(FileUpload::REEMPLAZAR);
+
 if($subir->upload()){
     echo 'Archivo subido con éxito';
 } else{
     echo 'Archivo no subido';
 }
+
 
 $juegos->setCaratula($subir->getNombre());
 

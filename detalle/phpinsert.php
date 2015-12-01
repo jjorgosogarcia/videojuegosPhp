@@ -8,7 +8,6 @@ $detalles->read();
 $r = $gestor->insert($detalles);
 $bd->close();
 
-echo $r;
-var_dump($bd->getError());
-
-//header("Location:index.php?op=insert&r=$r");
+//echo $r;
+//var_dump($bd->getError());
+header("Location:index.php?op=insert&r=$r");

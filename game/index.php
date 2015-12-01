@@ -118,7 +118,7 @@ $juegos = $gestor->getList($page, trim($orden));
                     <td><?= $juego->getPrecio() ?></td>
                     <td><?= $juego->getStock() ?></td>
                     <td>
-                        <a class='borrar' href='phpdelete.php?Code=<?= $juego->getId_juego() ?>'>borrar</a> 
+                        <a class='borrar' href='phpdelete.php?Code=<?= $juego->getId_juego() ?>&caratula=<?= $juego->getCaratula() ?>'>borrar</a> 
                         <a href='viewedit.php?ID=<?= $juego->getId_juego() ?>'>editar</a>
                     </td>
                 </tr>

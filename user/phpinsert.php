@@ -8,7 +8,7 @@ $clientes->read();
 $r = $gestor->insert($clientes);
 $bd->close();
 
-echo $r;
-var_dump($bd->getError());
+//echo $r;
+//var_dump($bd->getError());
 
-//header("Location:index.php?op=insert&r=$r");
+header("Location:index.php?op=insert&r=$r");
