@@ -1,3 +1,29 @@
+body {
+    background: url('fondobody.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+}
+
+.facturas{
+    text-align:center;
+}
+
+.botonBuscar{
+    width:100px;
+    display:inline;
+    margin:10px;
+}
+
+#inputBuscar{
+    margin-left:10px;
+    width:220px;
+}
+
+.contenedorBuscar{
+    width:1235px;
+    margin:0 auto;
+}
+
 .cajaAdmin{
     background-color:white;
     width: 508px;
@@ -98,7 +124,7 @@ body {
     width:100%;
     height: 150px;
     margin: 0 auto;
-    background-color:#5f5f61;
+    background-color:rgba(95, 95, 97, 0.7);
 }
 
 .cabecera img{

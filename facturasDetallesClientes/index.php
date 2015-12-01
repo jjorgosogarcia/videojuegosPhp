@@ -5,9 +5,16 @@ $user = $sesion->get("user");
 $id = $sesion->get("id");
 
 $bd = new DataBase();
-
+$correo = Request::post("correoBuscar");
+$todas = Request::post("todas");
 $gestor = new ManageRelationsJ($bd);
-$facturaDetallada = $gestor->getListJuegoDetalleFactura();
+
+if(isset($correo)){
+    $facturaDetallada = $gestor->getListJuegoDetalleFactura("cl.email='$correo'");
+}
+else{
+    $facturaDetallada = $gestor->getListJuegoDetalleFactura();
+}
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +40,15 @@ $facturaDetallada = $gestor->getListJuegoDetalleFactura();
             <div class="separador"></div>
         </div>
     </header>
-       <div class="contenedor todas">     
+       <div class="contenedor todas">
+           <h3 class="facturas">Visualizar facturas</h3>
+           <form action="index.php" method="post">
+               <div class="contenedorBuscar">
+                   <input id="inputBuscar" type="text" name="correoBuscar" value="" placeholder="Introduzca el correo a buscar" />
+                <input class="botonBuscar" type="submit" value="Todas" name="todas" />
+                <input class="botonBuscar" type="submit" value="Buscar" />
+               </div>
+           </form>
                 <div class="CSSTableGenerator" >
         <table border="1">
             <thead>
